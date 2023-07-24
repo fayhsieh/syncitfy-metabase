@@ -1,0 +1,70 @@
+// General
+body {
+    background-color: #f8f7fa;
+}
+
+.layout-container {
+    display: flex;
+}
+
+// Menu
+.layout-menu {
+    max-width: 260px;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    img {
+        width: 100%;
+    }
+}
+
+// Main content
+.layout-content-wrapper {
+    width: 100%;
+    padding: 1.5rem;
+    margin-left: 260px;
+
+    .dash-grid {
+
+        h4 {
+            margin-bottom: 1.5rem;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+
+            .col-2, .col-4, .col-6, .col-8, .col-12 {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
+
+// Navbar
+.navbar {
+    background-color: #fff;
+    padding: 12px 24px;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 0.125rem 0.25rem rgba(165,163,174,.3);
+    
+    img {
+        width: auto;
+        height: 38px;
+    }
+}
+
+// Widgets
+.sample-block {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+    color: #555;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0.125rem 0.25rem rgba(165,163,174,.3);
+}
