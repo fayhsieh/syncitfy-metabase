@@ -106,3 +106,21 @@
         }
     }
 }
+
+.allocation-card {
+    
+    .card-body {
+        .allocation-type {
+            margin-bottom: 0.75rem;
+
+            .type-icon {
+                width: 24px;
+                color: $color-n-700;
+            }
+        }
+
+        .allocation-desc {
+            color: $color-n-500;
+        }
+    }
+}
