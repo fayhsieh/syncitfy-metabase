@@ -31,8 +31,16 @@ aside.layout-menu {
     background-color: $color-n-100;
     box-shadow: 0 0.125rem 0.25rem rgba(165,163,174,.3);
 
-    img {
-        width: 100%;
+    .app-brand {
+        display: flex;
+        align-items: center;
+        margin: 0 0.875rem 0 1rem;
+        padding: 0 0.5rem;
+        height: 72px;
+
+        img {
+            width: 150px;
+        }
     }
 
     ul.menu-inner {
@@ -56,6 +64,11 @@ aside.layout-menu {
 
                 &:hover {
                     background-color: $color-n-200;
+                }
+
+                &.active {
+                    color: $color-n-100;
+                    background-color: $color-synctify;
                 }
 
                 .menu-icon {

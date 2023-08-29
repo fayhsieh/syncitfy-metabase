@@ -30,8 +30,20 @@ aside.layout-menu {
           box-shadow: 0 0.125rem 0.25rem rgba(165, 163, 174, 0.3);
 }
 
-aside.layout-menu img {
-  width: 100%;
+aside.layout-menu .app-brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0.875rem 0 1rem;
+  padding: 0 0.5rem;
+  height: 72px;
+}
+
+aside.layout-menu .app-brand img {
+  width: 150px;
 }
 
 aside.layout-menu ul.menu-inner {
@@ -63,6 +75,11 @@ aside.layout-menu ul.menu-inner li.menu-item a.menu-link {
 
 aside.layout-menu ul.menu-inner li.menu-item a.menu-link:hover {
   background-color: #F0F0F0;
+}
+
+aside.layout-menu ul.menu-inner li.menu-item a.menu-link.active {
+  color: #FFFFFF;
+  background-color: #008d71;
 }
 
 aside.layout-menu ul.menu-inner li.menu-item a.menu-link .menu-icon {
