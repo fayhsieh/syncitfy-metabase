@@ -1,0 +1,72 @@
+.channel-card {
+  height: 100%;
+  border: none;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(17, 17, 18, 0.05);
+          box-shadow: 0 2px 4px 0 rgba(17, 17, 18, 0.05);
+}
+
+.channel-card .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.channel-card .card-body .card-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: none;
+  background-color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.channel-card .card-body .card-top .channel-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.channel-card .card-body .card-top .channel-icon img {
+  width: 100%;
+}
+
+.channel-card .card-body .card-top .channel-status {
+  text-align: right;
+}
+
+.channel-card .card-body .card-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.channel-card .card-body .card-bottom .channel-title {
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.channel-card .card-body .card-bottom .channel-category {
+  font-size: 0.875rem;
+  color: #979797;
+}
+/*# sourceMappingURL=channel.css.map */

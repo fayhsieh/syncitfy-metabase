@@ -1,5 +1,16 @@
+* {
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
 body {
   background-color: #f8f7fa;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Outfit", sans-serif;
+  color: #111112;
 }
 
 .layout-container {
