@@ -1,21 +1,23 @@
 // Variable
 @import '_variables';
 
-.badge {
-    // font-size: 0.875rem;
-}
-
-.channel-card {
-    height: 100%;
+.card {
     border: none;
     border-radius: 0.3rem;
     box-shadow: 0 2px 4px 0 rgba($color-n-900, 0.05);
+    height: 100%;
+
+    .card-body {
+        padding: 1.5rem;
+    }
+}
+
+.channel-card {
 
     .card-body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 1.5rem;
 
         .card-top {
             display: flex;
@@ -52,6 +54,54 @@
             .channel-category {
                 font-size: 0.875rem;
                 color: $color-n-500;
+            }
+        }
+    }
+}
+
+.warehouse-card {
+
+    .card-body {
+
+        .warehouse-title {
+            margin-bottom: 0.5rem;
+
+            .warehouse-name,
+            .warehouse-id {
+                display: inline-block;
+            }
+
+            .warehouse-name {
+                margin: 0;
+            }
+
+            .warehouse-id {
+                font-family: $font-title;
+                font-size: 1.25rem;
+                font-weight: 400;
+                line-height: 1.2;
+                color: $color-n-700;
+                margin-left: 0.25rem;
+            }
+        }
+
+        .warehouse-info {
+            padding: 0;
+
+            .info-item {
+                display: flex;
+                list-style: none;
+                color: $color-n-700;
+
+                & + .info-item {
+                    margin-top: 0.25rem;
+                }
+
+                .info-icon {
+                    width: 1.25rem;
+                    color: $color-n-500;
+                    margin-right: 0.5rem;
+                }
             }
         }
     }

@@ -14,6 +14,7 @@
 
     <!-- Vuexy style -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/card.css">
 </head>
 <body>
     <div class="layout-container">
@@ -50,60 +51,51 @@
             <main>
                 <div class="container-fluid dash-grid">
                     <div class="row">
-                        <h4>Welcome, [Org1] 👋</h4>
-                        <div class="col-12">
-                            <div class="sample-block" id="order">
-                                <iframe
-                                    src="https://metabase.synctify.net/public/dashboard/0d8bb4d0-d229-44f6-805f-d7d26b258790"
-                                    frameborder="0"
-                                    width="100%"
-                                    height="100%"
-                                    allowtransparency
-                                ></iframe>
+                        <h4>Warehouse</h4>
+                        <div class="col-12 col-md-6">
+                            <div class="card warehouse-card">
+                                <div class="card-body">
+                                    <div class="warehouse-title">
+                                        <h5 class="warehouse-name">Sample Fulfillment Center</h5>
+                                        <span class="warehouse-id">(RAYMENNC)</span>
+                                    </div>
+                                    <ul class="warehouse-info">
+                                        <li class="info-item warehouse-phone">
+                                            <i class="info-icon" data-feather="phone"></i>
+                                            18337580040
+                                        </li>
+                                        <li class="info-item warehouse-location">
+                                            <i class="info-icon" data-feather="map-pin"></i>
+                                            1742 Sabre St, Hayward CA 94545, US
+                                        </li>
+                                    </ul>
+                                    <div class="warehouse-status">
+                                        <span class="badge bg-success">Primary</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12">
-                            <div class="sample-block" id="channel">
-                                <iframe
-                                    src="https://metabase.synctify.net/public/dashboard/1631d029-cd34-4f61-9751-516010deab35"
-                                    frameborder="0"
-                                    width="100%"
-                                    height="100%"
-                                    allowtransparency
-                                ></iframe>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="sample-block" id="inventory">
-                                <iframe
-                                    src="https://metabase.synctify.net/public/dashboard/5d409eb2-0a0c-488c-83cf-7c0158bb4b33"
-                                    frameborder="0"
-                                    width="100%"
-                                    height="100%"
-                                    allowtransparency
-                                ></iframe>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="sample-block" id="heatmap">
-                                <iframe
-                                    src="https://metabase.synctify.net/public/dashboard/bfa77b30-ece4-4fdf-a8ff-86a11f544114"
-                                    frameborder="0"
-                                    width="100%"
-                                    height="100%"
-                                    allowtransparency
-                                ></iframe>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="sample-block" id="all">
-                                <iframe
-                                    src="https://metabase.synctify.net/public/dashboard/297e2e81-7923-4b8a-aaf7-89d8cd0642ed"
-                                    frameborder="0"
-                                    width="100%"
-                                    height="100%"
-                                    allowtransparency
-                                ></iframe>
+                        <div class="col-12 col-md-6">
+                            <div class="card warehouse-card">
+                                <div class="card-body">
+                                    <div class="warehouse-title">
+                                        <h5 class="warehouse-name">Another Fulfillment Center</h5>
+                                        <span class="warehouse-id">(NJJW3)</span>
+                                    </div>
+                                    <ul class="warehouse-info">
+                                        <li class="info-item warehouse-phone">
+                                            <i class="info-icon" data-feather="phone"></i>
+                                            18337580040
+                                        </li>
+                                        <li class="info-item warehouse-location">
+                                            <i class="info-icon" data-feather="map-pin"></i>
+                                            1742 Sabre St, Hayward CA 94545, US
+                                        </li>
+                                    </ul>
+                                    <div class="warehouse-status">
+                                        <!-- <span class="badge bg-success">Primary</span> -->
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
