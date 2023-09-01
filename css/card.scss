@@ -1,10 +1,14 @@
 // Variable
 @import '_variables';
 
+// --------------------
+// Override Card Style
+// --------------------
 .card {
     border: none;
     border-radius: 0.3rem;
     box-shadow: 0 2px 4px 0 rgba($color-n-900, 0.05);
+    margin: 0;
     height: 100%;
 
     .card-body {
@@ -12,56 +16,87 @@
     }
 }
 
-.channel-card {
+.card-wrap {
+    display: grid;
+    gap: 30px;
+}
 
-    .card-body {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        .card-top {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            border: none;
-            background-color: $color-n-100;
-            margin-bottom: 1rem;
+// ---------------------
+// Customized Card Wrap
+// ---------------------
+@mixin columns($desktop, $tablet, $mobile) {
+    grid-template-columns: repeat($desktop, 1fr);
     
-            .channel-icon {
-                width: 48px;
-                height: 48px;
-    
-                img {
-                    width: 100%;
-                }
-            }
+    @media (max-width: 991.98px) {
+        grid-template-columns: repeat($tablet, 1fr);
+    }
 
-            .channel-status {
-                text-align: right;
-            }
-        }
+    @media (max-width: 575.98px) {
+        grid-template-columns: repeat($mobile, 1fr);
+    }
+}
 
-        .card-bottom {
+// --------------------
+// Customized Style
+// --------------------
+
+// Channel List
+.channel-list {
+    @include columns(3, 2, 1);
+
+    .channel-card {
+
+        .card-body {
             display: flex;
             flex-direction: column;
-
-            .channel-title {
-                font-family: $font-title;
-                font-weight: 500;
-                margin-bottom: 0;
+            justify-content: space-between;
+    
+            .card-top {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                border: none;
+                background-color: $color-n-100;
+                margin-bottom: 1.5rem;
+        
+                .channel-icon {
+                    width: 48px;
+                    height: 48px;
+        
+                    img {
+                        width: 100%;
+                    }
+                }
+    
+                .channel-status {
+                    text-align: right;
+                }
             }
-
-            .channel-category {
-                font-size: 0.875rem;
-                color: $color-n-500;
+    
+            .card-bottom {
+                display: flex;
+                flex-direction: column;
+    
+                .channel-display-name {
+                    font-family: $font-title;
+                    font-weight: 500;
+                    margin-bottom: 0;
+                }
+    
+                .channel-category {
+                    font-size: 0.875rem;
+                    color: $color-n-500;
+                }
             }
         }
     }
 }
 
-.warehouse-card {
+// Warehouse List
+.warehouse-list {
+    @include columns(2, 1, 1);
 
-    .card-body {
+    .warehouse-card {
 
         .warehouse-title {
             margin-bottom: 0.5rem;
@@ -104,12 +139,19 @@
                 }
             }
         }
+
+        .warehouse-status {
+            margin-top: 1rem;
+        }
     }
 }
 
-.allocation-card {
+// Allocation List
+.allocation-list {
+    @include columns(3, 2, 1);
+
+    .allocation-card {
     
-    .card-body {
         .allocation-type {
             margin-bottom: 0.75rem;
 
