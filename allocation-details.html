@@ -80,7 +80,7 @@
                                     <div class="priority-block">
                                         <h4 class="priority-title red">Highest</h4>
                                         <ul id="highest" class="connectedSortable priority-list" data-empty="Drag and drop sales channels here to adjust priority.">
-                                            <li class="ui-state-default list-item">
+                                            <li data-id="1001" class="ui-state-default list-item">
                                                 <div class="item-inner">
                                                     <div class="row">
                                                         <div class="col-4">
@@ -112,7 +112,7 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="ui-state-default list-item">
+                                            <li data-id="1002" class="ui-state-default list-item">
                                                 <div class="item-inner">
                                                     <div class="row">
                                                         <div class="col-4">
@@ -144,7 +144,7 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="ui-state-default list-item">
+                                            <li data-id="1003" class="ui-state-default list-item">
                                                 <div class="item-inner">
                                                     <div class="row">
                                                         <div class="col-4">
@@ -186,7 +186,7 @@
                                     <div class="priority-block">
                                         <h4 class="priority-title orange">High</h4>
                                         <ul id="high" class="connectedSortable priority-list" data-empty="Drag and drop sales channels here to adjust priority.">
-                                            <li class="ui-state-default list-item">
+                                            <li data-id="1004" class="ui-state-default list-item">
                                                 <div class="item-inner">
                                                     <div class="row">
                                                         <div class="col-4">
@@ -289,7 +289,7 @@
 
 
             $('.dropdown-toggle').each(function(){
-                
+
                 this.addEventListener('shown.bs.dropdown', function () {
                     $( "#highest, #high, #medium, #low" ).sortable("disable");
                 });
