@@ -1,0 +1,66 @@
+@charset "UTF-8";
+.section-wrap {
+  border: 1px solid #000;
+}
+.section-wrap .section-body {
+  padding: 0;
+}
+.section-wrap .section-body .section-item {
+  border-top: 1px solid #000;
+  padding: 20px;
+}
+.section-wrap .section-body .add-item-btn {
+  border: 1px dashed mediumturquoise;
+  color: mediumturquoise;
+  width: 100%;
+  min-height: 50px;
+  margin-top: 10px;
+}
+
+.section-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.section-list.empty, .section-list:empty {
+  min-height: 60px;
+  background-color: #eee;
+  border: 1px dashed #333;
+  position: relative;
+}
+.section-list.empty::before, .section-list:empty::before {
+  content: "drag and drop sales here";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section-list .list-item {
+  cursor: grab;
+  min-height: 60px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+.section-list .list-item::before {
+  content: "⋮⋮";
+  display: block;
+  margin-right: 20px;
+}
+.section-list .list-item .item-inner {
+  flex-grow: 1;
+}
+.section-list .list-item .item-inner .dropdown .dropdown-toggle::after {
+  content: "⋮";
+  border: unset;
+}
+
+.ui-state-highlight {
+  min-height: 60px;
+  background-color: #eee;
+}
+
+/*# sourceMappingURL=allocation.css.map */
