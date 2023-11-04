@@ -74,10 +74,6 @@
 
                                 <div class="allocation-header">
                                     <h3 class="box-title">Allocation Priority</h3>
-                                    <p class="help-block">
-                                        <i data-feather="help-circle"></i>
-                                        You can assign priorities to each sales platform based on the strategic importance. The inventory allocation follows a sequential distribution based on priority.
-                                    </p>
                                 </div>
 
                                 <div class="allocation-body">
@@ -247,6 +243,13 @@
                                         </button>
                                     </div>
                                 </div>
+
+                                <div class="allocation-footer">
+                                    <p class="help-block">
+                                        <i data-feather="help-circle"></i>
+                                        You can assign priorities to each sales platform based on the strategic importance. The inventory allocation follows a sequential distribution based on priority.
+                                    </p>
+                                </div>
                             </div>
 
                         </div>
@@ -278,22 +281,9 @@
 
             $( "#highest, #high, #medium, #low" ).sortable({
                 connectWith: ".connectedSortable",
-                placeholder: "ui-state-highlight",
-                create: function(e, ui) {
-                    updateEmptyStyle(e.target);
-                },
-                update: function(e, ui) {
-                    updateEmptyStyle(e.target);
-                }
+                placeholder: "ui-state-highlight"
             }).disableSelection();
-
-            function updateEmptyStyle(el) {
-                if ( el.children.length <= 0 ) {
-                    $(el).addClass('empty');
-                } else {
-                    $(el).removeClass('empty');
-                }
-            }
+            
         } );
     </script>
 
