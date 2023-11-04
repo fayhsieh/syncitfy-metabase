@@ -182,7 +182,8 @@
     
                                     <div class="section-item">
                                         <h4 class="section-title">Medium</h4>
-                                        <ul id="sortable3" class="connectedSortable section-list" data-empty="drag and drop sales here"></ul>
+                                        <ul id="sortable3" class="connectedSortable section-list" data-empty="drag and drop sales here">
+                                        </ul>
                                         <button class="add-item-btn">Add Channel</button>
                                     </div>
     
@@ -224,14 +225,21 @@
             $( "#sortable1, #sortable2, #sortable3, #sortable4" ).sortable({
                 connectWith: ".connectedSortable",
                 placeholder: "ui-state-highlight",
+                create: function(e, ui) {
+                    updateEmptyStyle(e.target);
+                },
                 update: function(e, ui) {
-                    if ( e.target.children.length <= 0 ) {
-                        $(e.target).addClass('empty');
-                    } else {
-                        $(e.target).removeClass('empty');
-                    }
+                    updateEmptyStyle(e.target);
                 }
             }).disableSelection();
+
+            function updateEmptyStyle(el) {
+                if ( el.children.length <= 0 ) {
+                    $(el).addClass('empty');
+                } else {
+                    $(el).removeClass('empty');
+                }
+            }
         } );
     </script>
 
