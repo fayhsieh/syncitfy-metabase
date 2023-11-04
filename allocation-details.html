@@ -236,7 +236,10 @@
     
                                     <div class="priority-block">
                                         <h4 class="priority-title green">Low</h4>
-                                        <ul id="low" class="connectedSortable priority-list" data-empty="Drag and drop sales channels here to adjust priority."></ul>
+                                        <div>
+                                            <ul id="low" class="connectedSortable priority-list" data-empty="Drag and drop sales channels here to adjust priority."></ul>
+                                        </div>
+                                        
                                         <button class="add-item-btn">
                                             <i class="icon-plus" data-feather="plus"></i>
                                             Add Channel
@@ -283,6 +286,19 @@
                 connectWith: ".connectedSortable",
                 placeholder: "ui-state-highlight"
             }).disableSelection();
+
+
+            $('.dropdown-toggle').each(function(){
+                
+                this.addEventListener('shown.bs.dropdown', function () {
+                    $( "#highest, #high, #medium, #low" ).sortable("disable");
+                });
+
+                this.addEventListener('hidden.bs.dropdown', function () {
+                    $( "#highest, #high, #medium, #low" ).sortable("enable");
+                });
+            });
+
             
         } );
     </script>
