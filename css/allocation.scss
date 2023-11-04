@@ -39,7 +39,7 @@
         position: relative;
 
         &::before {
-            content: 'drag and drop sales here';
+            content: attr(data-empty);
             position: absolute;
             top: 50%;
             left: 50%;
