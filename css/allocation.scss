@@ -110,12 +110,17 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    min-height: 66px;
+    border-radius: 0.3rem;
+
+    &:only-child {
+        background-color: #f8fafc;
+    }
     
     &.empty,
     &:empty {
-        min-height: 66px;
+        background-color: #f8fafc;
         border: 2px dashed #ececf1;
-        border-radius: 0.3rem;
         position: relative;
 
         &::before {
