@@ -43,6 +43,7 @@
 // Channel List
 .channel-list {
     @include columns(3, 2, 1);
+    gap: 24px;
 
     .channel-card {
 

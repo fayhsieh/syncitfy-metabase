@@ -60,8 +60,9 @@
             </header>
             <main>
                 <div class="container-fluid dash-grid">
+                    <h5>All Channels</h5>
                     <div class="row">
-                        <div class="col-2">
+                        <div class="col-3">
                             <style>
                                 .filter-item.active {
                                     color: red;
@@ -73,21 +74,24 @@
                                 }
                             </style>
                             <ul id="filterMenu">
-                                <li><a class="filter-item active" href="javascript://">All</a></li>
-                                <li><a data-category="1" class="filter-item" href="javascript://">Wholesaler&Retail</a></li>
-                                <li><a data-category="2" class="filter-item" href="javascript://">Marketplace</a></li>
-                                <li><a data-category="3" class="filter-item" href="javascript://">Shopping Cart</a></li>
-                                <li><a data-category="4" class="filter-item" href="javascript://">3PL&WMS&ERP</a></li>
-                                <li><a data-category="5" class="filter-item" href="javascript://">Fi</a></li>
-                                <li><a data-category="0" class="filter-item" href="javascript://">Others</a></li>
+                                <li><a class="filter-item active" href="javascript://"><i data-feather="grid"></i>All</a></li>
+                                <li><a data-category="1" class="filter-item" href="javascript://"><i data-feather="home"></i>Wholesaler & Retail</a></li>
+                                <li><a data-category="2" class="filter-item" href="javascript://"><i data-feather="shopping-bag"></i>Marketplace</a></li>
+                                <li><a data-category="3" class="filter-item" href="javascript://"><i data-feather="shopping-cart"></i>Shopping Cart</a></li>
+                                <li><a data-category="4" class="filter-item" href="javascript://"><i data-feather="truck"></i>3PL & WMS & ERP</a></li>
+                                <li><a data-category="5" class="filter-item" href="javascript://"><i data-feather="dollar-sign"></i>Financial Solutions</a></li>
+                                <li><a data-category="0" class="filter-item" href="javascript://"><i data-feather="plus-circle"></i>Others</a></li>
                             </ul>
                         </div>
-                        <div class="col-10">
-                            <h4>All Channels</h4>
+                        <div class="col-9">
 
-                            <input class="form-control" id="searchInput" type="text" placeholder="Search by name">
-                            <span class="not-found-result keyword-hide">No search results matching the criteria.</span>
+                            <!-- Search -->
+                            <div>
+                                <input class="form-control" id="searchInput" type="text" placeholder="Search by integration name">
+                                <span class="not-found-result keyword-hide">No search results matching the criteria.</span>
+                            </div>
 
+                            <!-- Channel List -->
                             <div class="card-wrap channel-list">
                                 <div data-category="0" class="card channel-card">
                                     <div class="card-body">
@@ -101,7 +105,7 @@
                                         </div>
                                         <div class="card-bottom">
                                             <span class="channel-category">Manual</span>
-                                            <h4 class="channel-display-name">Manual</h4>
+                                            <h5 class="channel-display-name">Manual</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -117,7 +121,7 @@
                                         </div>
                                         <div class="card-bottom">
                                             <span class="channel-category">Marketplace</span>
-                                            <h4 class="channel-display-name">Amazon_US</h4>
+                                            <h5 class="channel-display-name">Amazon_US</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -133,7 +137,7 @@
                                         </div>
                                         <div class="card-bottom">
                                             <span class="channel-category">Marketplace</span>
-                                            <h4 class="channel-display-name">Amazon_UK</h4>
+                                            <h5 class="channel-display-name">Amazon_UK</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -149,7 +153,7 @@
                                         </div>
                                         <div class="card-bottom">
                                             <span class="channel-category">Wholesaler&Retail</span>
-                                            <h4 class="channel-display-name">Wayfair</h4>
+                                            <h5 class="channel-display-name">Wayfair</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -165,7 +169,7 @@
                                         </div>
                                         <div class="card-bottom">
                                             <span class="channel-category">Shopping Cart</span>
-                                            <h4 class="channel-display-name">Shopify</h4>
+                                            <h5 class="channel-display-name">Shopify</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -181,7 +185,7 @@
                                         </div>
                                         <div class="card-bottom">
                                             <span class="channel-category">Wholesaler&Retail</span>
-                                            <h4 class="channel-display-name">The Home Depot</h4>
+                                            <h5 class="channel-display-name">The Home Depot</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -197,7 +201,7 @@
                                         </div>
                                         <div class="card-bottom">
                                             <span class="channel-category">Wholesaler&Retail</span>
-                                            <h4 class="channel-display-name">Lowe's</h4>
+                                            <h5 class="channel-display-name">Lowe's</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -213,7 +217,7 @@
                                         </div>
                                         <div class="card-bottom">
                                             <span class="channel-category">Wholesaler&Retail</span>
-                                            <h4 class="channel-display-name">Sam's Club</h4>
+                                            <h5 class="channel-display-name">Sam's Club</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -229,7 +233,7 @@
                                         </div>
                                         <div class="card-bottom">
                                             <span class="channel-category">Wholesaler&Retail</span>
-                                            <h4 class="channel-display-name">Houzz</h4>
+                                            <h5 class="channel-display-name">Houzz</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -245,7 +249,7 @@
                                         </div>
                                         <div class="card-bottom">
                                             <span class="channel-category">Wholesaler&Retail</span>
-                                            <h4 class="channel-display-name">Zulily</h4>
+                                            <h5 class="channel-display-name">Zulily</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -261,7 +265,7 @@
                                         </div>
                                         <div class="card-bottom">
                                             <span class="channel-category">Marketplace</span>
-                                            <h4 class="channel-display-name">Walmart Marketplace</h4>
+                                            <h5 class="channel-display-name">Walmart Marketplace</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -277,7 +281,7 @@
                                         </div>
                                         <div class="card-bottom">
                                             <span class="channel-category">Wholesaler&Retail</span>
-                                            <h4 class="channel-display-name">Overstock</h4>
+                                            <h5 class="channel-display-name">Overstock</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -293,7 +297,7 @@
                                         </div>
                                         <div class="card-bottom">
                                             <span class="channel-category">Wholesaler&Retail</span>
-                                            <h4 class="channel-display-name">Debenhams</h4>
+                                            <h5 class="channel-display-name">Debenhams</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -309,7 +313,7 @@
                                         </div>
                                         <div class="card-bottom">
                                             <span class="channel-category">3PL&WMS&ERP</span>
-                                            <h4 class="channel-display-name">Castlegate</h4>
+                                            <h5 class="channel-display-name">Castlegate</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -325,7 +329,7 @@
                                         </div>
                                         <div class="card-bottom">
                                             <span class="channel-category">3PL&WMS&ERP</span>
-                                            <h4 class="channel-display-name">Mainfreight</h4>
+                                            <h5 class="channel-display-name">Mainfreight</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -341,7 +345,7 @@
                                         </div>
                                         <div class="card-bottom">
                                             <span class="channel-category">3PL&WMS&ERP</span>
-                                            <h4 class="channel-display-name">51 Delivery</h4>
+                                            <h5 class="channel-display-name">51 Delivery</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -357,7 +361,7 @@
                                         </div>
                                         <div class="card-bottom">
                                             <span class="channel-category">3PL&WMS&ERP</span>
-                                            <h4 class="channel-display-name">Corsan</h4>
+                                            <h5 class="channel-display-name">Corsan</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -365,15 +369,15 @@
                                     <div class="card-body">
                                         <div class="card-top">
                                             <div class="channel-icon">
-                                                <img src="" alt="UnKnow">
+                                                <img src="images/channels/logo-quickbook.png" alt="Quickbook">
                                             </div>
                                             <div class="channel-status">
-                                                <span class="badge bg-success">UnKnow</span>
+                                                <span class="badge bg-success">Completed</span>
                                             </div>
                                         </div>
                                         <div class="card-bottom">
-                                            <span class="channel-category">Fi</span>
-                                            <h4 class="channel-display-name">UnKnow</h4>
+                                            <span class="channel-category">Financial Solutions</span>
+                                            <h5 class="channel-display-name">Quickbook</h5>
                                         </div>
                                     </div>
                                 </div>
