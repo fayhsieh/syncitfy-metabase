@@ -279,14 +279,21 @@
             $( "#highest, #high, #medium, #low" ).sortable({
                 connectWith: ".connectedSortable",
                 placeholder: "ui-state-highlight",
+                create: function(e, ui) {
+                    updateEmptyStyle(e.target);
+                },
                 update: function(e, ui) {
-                    if ( e.target.children.length <= 0 ) {
-                        $(e.target).addClass('empty');
-                    } else {
-                        $(e.target).removeClass('empty');
-                    }
+                    updateEmptyStyle(e.target);
                 }
             }).disableSelection();
+
+            function updateEmptyStyle(el) {
+                if ( el.children.length <= 0 ) {
+                    $(el).addClass('empty');
+                } else {
+                    $(el).removeClass('empty');
+                }
+            }
         } );
     </script>
 
