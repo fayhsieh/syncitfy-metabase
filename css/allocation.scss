@@ -117,13 +117,12 @@ body {
     &::before {
         content: attr(data-empty);
         width: 100%;
-        height: 100%;
+        height: 66px;
+        line-height: 66px;
+        text-align: center;
         position: absolute;
-        z-index: 0;
         top: 0;
         left: 0;
-        text-align: center;
-        line-height: 66px;
         font-size: 0.875rem;
         color: $color-n-500;
         border: 2px dashed #ececf1;
@@ -134,7 +133,6 @@ body {
 
     .list-item {
         position: relative;
-        z-index: 1;
         display: flex;
         align-items: center;
         border: 1px solid #dbe3e6;
@@ -202,6 +200,7 @@ body {
             }
 
             .dropdown {
+
                 .dropdown-toggle {
                     line-height: 1;
                     border: none;
@@ -224,6 +223,9 @@ body {
                         height: 20px;
                     }
                 }
+                .dropdown-menu {
+                    
+                }
             }
         }
     }
@@ -235,4 +237,5 @@ body {
     background-color: #f8fafc;
     border: none;
     border-radius: 0.3rem;
+    position: relative;
 }

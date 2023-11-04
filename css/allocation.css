@@ -94,13 +94,12 @@ body {
 .priority-list::before {
   content: attr(data-empty);
   width: 100%;
-  height: 100%;
+  height: 66px;
+  line-height: 66px;
+  text-align: center;
   position: absolute;
-  z-index: 0;
   top: 0;
   left: 0;
-  text-align: center;
-  line-height: 66px;
   font-size: 0.875rem;
   color: #979797;
   border: 2px dashed #ececf1;
@@ -109,7 +108,6 @@ body {
 }
 .priority-list .list-item {
   position: relative;
-  z-index: 1;
   display: flex;
   align-items: center;
   border: 1px solid #dbe3e6;
@@ -186,12 +184,12 @@ body {
   width: 20px;
   height: 20px;
 }
-
 .ui-state-highlight {
   min-height: 66px;
   background-color: #f8fafc;
   border: none;
   border-radius: 0.3rem;
+  position: relative;
 }
 
 /*# sourceMappingURL=allocation.css.map */
