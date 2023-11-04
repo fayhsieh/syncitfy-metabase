@@ -15,15 +15,7 @@ body {
 
         .box-title {
             font-size: 1.15rem;
-        }
-
-        .help-block {
-            color: $color-n-600;
             margin: 0;
-
-            .feather-help-circle {
-                width: 16px;
-            }
         }
     }
 
@@ -98,6 +90,20 @@ body {
                 width: 1.125rem;
                 height: 1.125rem;
                 margin-right: 3px;
+            }
+        }
+    }
+
+    .allocation-footer {
+        padding: 1.1rem;
+        border-top: 1px solid #f4f4f4;
+
+        .help-block {
+            color: $color-n-600;
+            margin: 0;
+
+            .feather-help-circle {
+                width: 16px;
             }
         }
     }
