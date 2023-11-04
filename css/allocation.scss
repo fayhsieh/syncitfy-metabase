@@ -1,41 +1,121 @@
-.section-wrap {
-    border: 1px solid #000;
+// Variable
+@import '_variables';
 
-    .section-header {
+body {
+    overflow-x: hidden;
+}
 
+.allocation-wrap {
+    background-color: $color-n-100;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(165,163,174,.3);
+
+    .allocation-header {
+        padding: 1.1rem;
+
+        .box-title {
+            font-size: 1.15rem;
+        }
+
+        .help-block {
+            color: $color-n-600;
+            margin: 0;
+
+            .feather-help-circle {
+                width: 16px;
+            }
+        }
     }
 
-    .section-body {
+    .allocation-body {
         padding: 0;
 
-        .section-item {
-            border-top: 1px solid #000;
+        .priority-block {
+            border-top: 1px solid #f4f4f4;
             padding: 20px;
+
+            .priority-title {
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+
+                &.red {
+                    &::before {
+                        background-color: $color-red;
+                    }
+                }
+
+                &.orange {
+                    &::before {
+                        background-color: $color-orange;
+                    }
+                }
+
+                &.yellow {
+                    &::before {
+                        background-color: $color-yellow;
+                    }
+                }
+
+                &.green {
+                    &::before {
+                        background-color: $color-green;
+                    }
+                }
+            }
         }
 
         .add-item-btn {
-            border: 1px dashed mediumturquoise;
-            color: mediumturquoise;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             min-height: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            line-height: 1;
+            color: $color-synctify;
+            background-color: $color-n-100;
+            padding: 16px;
+            border: none;
+            border-radius: 0.3rem;
             margin-top: 10px;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: rgba($color-synctify, 0.05);
+            }
+
+            .icon-plus {
+                width: 1.125rem;
+                height: 1.125rem;
+                margin-right: 3px;
+            }
         }
     }
 }
 
-.section-list {
+.priority-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
     
     &.empty,
     &:empty {
-        min-height: 60px;
-        background-color: #eee;
-        border: 1px dashed #333;
+        min-height: 66px;
+        border: 2px dashed #ececf1;
+        border-radius: 0.3rem;
         position: relative;
 
         &::before {
@@ -44,30 +124,99 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            font-size: 0.875rem;
+            color: $color-n-500;
         }
     }
 
     .list-item {
-        cursor: grab;
-        min-height: 60px;
-        padding: 0 20px;
         display: flex;
         align-items: center;
+        border: 1px solid #dbe3e6;
+        border-radius: 0.3rem;
+        background-color: $color-n-100;
+        padding: 10px 16px;
+        min-height: 66px;
+        cursor: grab;
+        transition: 0.05s;
 
         &::before {
             content: '⋮⋮';
             display: block;
-            margin-right: 20px;
+            margin-right: 16px;
+            font-size: 1.375rem;
+            font-weight: 900;
+            letter-spacing: -3px;
+            color: #dbe3e6;
+        }
+
+        &:hover {
+            background-color: #f8fafc;
+        }
+
+        &.ui-sortable-helper {
+            box-shadow: 0 4px 28px rgba($color-n-900, 0.2);
         }
 
         .item-inner {
             flex-grow: 1;
 
+            div[class^="col"] {
+                display: flex;
+                align-items: center;
+            }
+
+            .channel-name {
+                display: inline-block;
+                font-size: 1rem;
+                margin: 0;
+            }
+
+            .channel-img {
+                display: inline-block;
+                width: 32px;
+                margin-right: 10px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .percentage,
+            .triggle,
+            .advanced {
+                font-size: 1rem;
+                line-height: 32px;
+                color: $color-n-800;
+            }
+
+            .triggle,
+            .advanced {
+                font-style: italic;
+                color: $color-n-500;
+            }
+
             .dropdown {
                 .dropdown-toggle {
+                    line-height: 1;
+                    border: none;
+                    border-radius: 0.3rem;
+                    color: #00745d;
+                    background-color: transparent;
+                    padding: 12px;
+                    transition: 0.05s;
+
                     &::after {
-                        content: '⋮';
-                        border: unset;
+                        display: none;
+                    }
+
+                    &:hover {
+                        color: #004134;
+                    }
+
+                    .icon-more-vertical {
+                        width: 20px;
+                        height: 20px;
                     }
                 }
             }
@@ -77,6 +226,8 @@
 
 // 預計降落地
 .ui-state-highlight {
-    min-height: 60px;
-    background-color: #eee;
+    min-height: 66px;
+    background-color: #f8fafc;
+    border: none;
+    border-radius: 0.3rem;
 }
