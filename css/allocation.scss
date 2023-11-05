@@ -144,7 +144,7 @@ body {
         border: 1px solid #dbe3e6;
         border-radius: 0.3rem;
         background-color: $color-n-100;
-        padding: 10px 16px;
+        padding: 10px 4px 10px 16px;
         min-height: 66px;
         cursor: grab;
         transition: 0.05s;
@@ -184,6 +184,8 @@ body {
             .channel-img {
                 display: inline-block;
                 width: 32px;
+                min-width: 32px;
+                height: 32px;
                 margin-right: 10px;
 
                 img {
